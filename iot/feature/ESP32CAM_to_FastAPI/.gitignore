@@ -2,4 +2,5 @@
 venv/
 .idea/
 __pycache__/
+images/
 client_secrets.json

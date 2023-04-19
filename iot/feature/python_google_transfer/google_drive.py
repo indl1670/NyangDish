@@ -7,6 +7,8 @@ import dotenv
 from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
 
+
+
 # # 환경변수 설정
 dotenv.load_dotenv()
 root_url = os.getenv("ROOT")     # esp32cam의 url주소
