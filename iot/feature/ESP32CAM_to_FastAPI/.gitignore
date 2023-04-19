@@ -1,5 +1,6 @@
+.env
 venv/
 .idea/
 __pycache__/
-test_img.jpg
+images/
 client_secrets.json
