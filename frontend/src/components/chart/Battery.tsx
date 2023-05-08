@@ -4,7 +4,7 @@ import Chart from 'react-apexcharts';
 import { useRecoilState } from "recoil";
 import { darkState } from "../../recoil/page";
 
-export default function MainChart() {
+export default function Battery() {
 
   const isDark = useRecoilState(darkState)[0];
 
@@ -33,7 +33,7 @@ export default function MainChart() {
       curve: "straight",
       width: 3,
     },
-    colors: ["#EC5E98", '#29325B'],
+    colors: ["#9FA9D8"],
     grid: {
       row: {
         colors: ["#f5f5f5f5", "transparent"],
@@ -42,7 +42,7 @@ export default function MainChart() {
     },
     markers: {
       size: 3,
-      colors: ["#EC5E98", '#29325B'],
+      colors: ["#9FA9D8"],
       shape: "circle",
       radius: 2,
       hover: {
@@ -77,15 +77,11 @@ export default function MainChart() {
     name: "전체 개체 수",
     data: [5, 3, 3, 4, 3, 4, 2]
   },
-  {
-    name: "중성화가 필요한 고양이",
-    data: [3, 2, 3, 3, 2, 1, 2]
-  }
   ]
 
   return (
     <div className="w-full h-full gap-1">
-      <h1 className="text-[1.3rem] font-bold" >개체 수 / 중성화 수</h1>
+      <h1 className="text-[1.3rem] font-bold" >배터리 잔여량</h1>
       <div className="h-[90%] w-full">
         <Chart height="100%" options={options} type="line" series={series} />
       </div>
